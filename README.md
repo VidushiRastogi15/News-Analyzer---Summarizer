@@ -9,11 +9,20 @@
 <p>This solution is a smart news analyzer that acts like a helpful guide for news consumption. It reads through a number of news articles, figures out what’s important, and gives you short, easy-to-understand summaries, saving user’s valuable time otherwise spent navigating through extensive content, making news consumption more efficient and accessible.</p>
 
 ## KEY FEATURES AND BENEFITS
-### 1. Eﬀortless Summaries: Distills complex news stories into concise summaries for quick comprehension.
-### 2. Streamlined User Experience: Presents relevant content without overwhelming users with a user-friendly interface.
-### 3. Time Savings: Empowers users to grasp the essence of news stories eﬀiciently, eliminating the need to go through extensive content.
-### 4. Innovative Technology: Integrates LangChain for advanced content analysis, ensuring accurate and relevant summaries.
-### 5. Future of News Consumption: Represents a pioneering approach to news consumption, seeing a precedent for eﬀicient and tailored content delivery.sendSend messageChecking who can access ﬁle.
+### 1. Eﬀortless Summaries: 
+<p>Distills complex news stories into concise summaries for quick comprehension.</p>
+
+### 2. Streamlined User Experience: 
+<p>Presents relevant content without overwhelming users with a user-friendly interface.</p>
+
+### 3. Time Savings: 
+<p>Empowers users to grasp the essence of news stories eﬀiciently, eliminating the need to go through extensive content.</p>
+
+### 4. Innovative Technology: 
+<p>Integrates LangChain for advanced content analysis, ensuring accurate and relevant summaries.</p>
+
+### 5. Future of News Consumption: 
+<p>Represents a pioneering approach to news consumption, seeing a precedent for eﬀicient and tailored content delivery.sendSend messageChecking who can access ﬁle.</p>
 
 ## TECHNOLOGIES USED
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/fa35dfeb-3007-4181-99bf-46cb61df06ad)
@@ -34,39 +43,31 @@
 
 ## CODE SNIPPET
 
-<center>
-  <p>Dependencies Imported</p>
-</center>
+### Dependencies Imported
 
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/9f7a8a65-2d7f-4a2f-8286-6167935720a5)
 
 
-<center>
-  <p>Search button</p>
-</center>
+
+### Search button
+
 
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/a4a522a9-aec4-4e1e-8e68-2173c5c1ea6d)
 
 
 
-<center>
-  <p>Search and summarize button</p>
-</center>
+### Search and summarize button
 
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/38070b9c-0729-48b3-94b4-f9bd0591cbbc)
 
 
 ## User Interface
 
-<center>
-  <p>Home Page</p>
-</center>
+### Home Page
 
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/d0e9a834-1b74-421f-a05c-89f8c886fefe)
 
-<center>
-  <p>Search Button</p>
-</center>
+### Search Button
 
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/036d5424-a733-4c2e-bce6-5a7e3c3e5c68)
 
