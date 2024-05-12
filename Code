@@ -1,0 +1,73 @@
+import streamlit as st
+import requests
+from transformers import pipeline
+from googletrans import Translator
+
+# Function to fetch news based on user input
+def fetch_news(api_key, topic, num_articles):
+    url = f"https://newsapi.org/v2/everything?q={topic}&apiKey={api_key}&pageSize={num_articles}&language=en"  # Only fetching English news
+    response = requests.get(url)
+    data = response.json()
+    return data.get('articles', [])
+
+# Function to summarize news article
+def summarize_news(article_text):
+    summarizer = pipeline("summarization")
+    summary = summarizer(article_text, max_length=180, min_length=30, do_sample=False)[0]['summary_text']
+    return summary
+
+# Function to translate text
+def translate_text(text, target_language):
+    translator = Translator()
+    translated_text = translator.translate(text, dest=target_language)
+    return translated_text.text
+
+# Function to perform sentiment analysis on text
+def analyze_sentiment(text):
+    sentiment_analyzer = pipeline("sentiment-analysis")
+    result = sentiment_analyzer(text)
+    return result[0]['label'] if result else "Unknown"
+
+# Streamlit UI
+def main():
+    st.title("News Search, Summarization, Translation, and Sentiment Analysis")
+
+    # Input fields
+    topic = st.text_input("Enter a topic to search for news")
+    num_articles = st.slider("Number of articles to display", min_value=1, max_value=10, value=5)
+    target_language = st.text_input("Enter target language (e.g., 'fr' for French)", "fr")  # Default: French
+    api_key = st.text_input("Enter your News API key", value="abf0248a755645439ac72e4f5ed53391")
+    summarize_option = st.checkbox("Summarize News", value=False)
+    sentiment_option = st.checkbox("Perform Sentiment Analysis", value=False)
+
+    # Button to trigger news fetch
+    if st.button("Search"):
+        # Checking if API key is provided
+        if not api_key:
+            st.warning("Please enter your API key!")
+        else:
+            # Fetching news articles
+            news = fetch_news(api_key, topic, num_articles)
+            if news:
+                st.success("News fetched successfully!")
+                # Displaying news articles
+                for idx, article in enumerate(news, 1):
+                    st.subheader(f"Article {idx}")
+                    st.markdown(f"Title: {article.get('title', 'N/A')}")
+                    st.markdown(f"Source: {article.get('source', {}).get('name', 'Unknown')}")
+                    st.markdown(f"Published at: {article.get('publishedAt', 'N/A')}")
+                    if summarize_option:
+                        st.write("Summary:")
+                        st.write(summarize_news(article.get('content', '')))
+                    else:
+                        st.markdown(f"Description: {article.get('description', 'N/A')}")
+                    if target_language != 'en':  # Translate only if target language is not English
+                        translated_description = translate_text(article.get('description', ''), target_language)
+                        st.markdown(f"Translated Description ({target_language}): {translated_description}")
+                    if sentiment_option:
+                        sentiment = analyze_sentiment(article.get('description', ''))
+                        st.markdown(f"Sentiment: {sentiment}")
+                    st.markdown(f"URL: [Read more]({article.get('url', 'N/A')})")
+                    st.write("---")
+            else:
+                st.warning("No news found.")
