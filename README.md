@@ -29,13 +29,15 @@
 ### Hugging Face Transformers
 <p>A model hub containing many pre-trained models. The 🤗 Transformers library that supports the download and use of these models for NLP applications and fine-tuning. </p>
 
-![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/f047e2f9-ae4d-4045-ba29-343909419812)
-### LangChain
-<p>LangChainis a framework designed to simplify the creation of applications using large language models.</p>
+![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/5a1ba1e5-7ef0-4493-a7de-0cbca5498a60)
 
-![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/f50894bb-4e51-4b05-9ba5-73b860a6225f)
-### BEAUTIFUL SOUP
-<p>Beautiful Soup is a Python library for pulling data out of HTML and XML files.</p> 
+### BART
+<p>BART is a powerful NLP model capable of generating high-quality text and performing various sequence-to-sequence tasks, making it widely applicable across different domains and applications in natural language processing.</p>
+
+![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/778ee047-c2d6-409a-8b28-949593b60a6b)
+
+### PYTHON
+<p>The primary programming language used for development due to its versatility, rich ecosystem of libraries, and ease of use.</p> 
 
 ![image](https://github.com/VidushiRastogi15/News-Analyzer-and-Summarizer/assets/118375146/e303c8b9-6fd0-4353-b99d-08a09a6acef1)
 ### STREAMLIT
